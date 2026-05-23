@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeFleet | Web. Marketing. IT. Egy helyen.</title>
+    <meta name="description" content="Nem csak weboldalakat készítünk – digitális és IT rendszereket építünk, amelyek mérhetően több ügyfelet és bevételt hoznak." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css?v=21">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════
+         NAVBAR — fixed, mix-blend-mode difference
+    ═══════════════════════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">CODEFLEET</a>
+        <div class="nav-center">
+            <a href="#about" class="nav-link">RÓLUNK</a>
+            <a href="#services" class="nav-link">SZOLGÁLTATÁSOK</a>
+            <a href="#cases" class="nav-link">EREDMÉNYEK</a>
+            <a href="#contact" class="nav-link">KAPCSOLAT</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+            <span class="menu-dot"></span>
+            <span class="menu-label">MENÜ</span>
+        </button>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FULL-SCREEN MENU OVERLAY
+    ═══════════════════════════════════════════════════════ -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-overlay-bg"></div>
+        <div class="menu-content">
+            <ul class="menu-links">
+                <li><span class="menu-num">01</span><a href="#home" class="menu-link">FŐOLDAL</a></li>
+                <li><span class="menu-num">02</span><a href="#about" class="menu-link">RÓLUNK</a></li>
+                <li><span class="menu-num">03</span><a href="#services" class="menu-link">SZOLGÁLTATÁSOK</a></li>
+                <li><span class="menu-num">04</span><a href="#cases" class="menu-link">EREDMÉNYEK</a></li>
+                <li><span class="menu-num">05</span><a href="#contact" class="menu-link">KAPCSOLAT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-sticky" id="heroSticky">
+
+            <!-- Pink circle — grows from BL blob center on scroll -->
+            <div class="hero-pink-circle" id="heroPinkCircle"></div>
+
+            <!-- BOTTOM-LEFT tech blob (smaller) — source of pink circle -->
+            <div class="hero-tech-bl" id="techBL">
+                <div class="tech-graphic">
+                    <div class="floating-element el-1"><i class="fab fa-wordpress"></i></div>
+                    <div class="floating-element el-2"><i class="fa-solid fa-code"></i></div>
+                    <div class="floating-element el-4"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="graphic-core"></div>
+                </div>
+            </div>
+
+            <!-- TOP-RIGHT tech blob (bigger) -->
+            <div class="hero-tech-tr" id="techTR">
+                <div class="tech-graphic">
+                    <div class="floating-element el-1"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="floating-element el-4"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="graphic-core graphic-core-dim"></div>
+                </div>
+            </div>
+
+            <!-- Centered title — sits over both blobs -->
+            <div class="hero-title-block">
+                <h1 class="hero-title">
+                    <span class="title-line title-line-1"><span class="title-inner">MI VAGYUNK A</span></span>
+                    <span class="title-line title-line-2"><span class="title-inner">CODEFLEET</span></span>
+                </h1>
+                <p class="hero-subheader">
+                    Webfejlesztés, marketing és IT megoldások egyetlen összehangolt rendszerben — stratégiai szemlélettel, modern technológiákkal és mérhető eredményekre fókuszálva. Nem különálló szolgáltatásokat nyújtunk, hanem egy stabil digitális hátteret építünk vállalkozásod számára.
+                </p>
+
+                <!-- Rotating CTA Button -->
+                <a href="#contact" class="rotating-cta">
+                    <div class="cta-text-ring">
+                        <!-- We will use CSS SVG text or just rotate a simple text element -->
+                        <svg viewBox="0 0 100 100" width="100%" height="100%">
+                            <defs>
+                                <path id="circlePath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+                            </defs>
+                            <text>
+                                <textPath href="#circlePath" startOffset="0%">
+                                    PROJEKT INDÍTÁSA • PROJEKT INDÍTÁSA • 
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+                    <div class="cta-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MARQUEE MOVED BELOW ABOUT SECTION -->    <!-- ═══════════════════════════════════════════════════════
+         WHAT WE DO — large text
+    ═══════════════════════════════════════════════════════ -->
+    <section id="about" class="about-section">
+        <!-- Optional BG text -->
+        <div class="about-content">
+            <h2 class="section-heading-massive reveal-up" style="animation-duration: 1.5s;">
+                EMELJÜK A MÁRKÁDAT<br>A KÖVETKEZŐ SZINTRE
+            </h2>
+            <div class="about-split">
+                <div class="about-left reveal-left" style="animation-duration: 1.5s;">
+                    <p class="big-text">
+                        Kreatív digitális ügynökség vagyunk, amely a legmagasabb minőségű weboldalakat, 
+                        marketing stratégiákat és IT megoldásokat készíti el minden méretű vállalkozás számára.
+                    </p>
+                    <div class="parallax-btn-wrapper reveal-up">
+                        <a href="#services" class="brave-circle-btn parallax-btn">
+                            <span class="link-text">SZOLGÁLTATÁSAINK</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="about-right reveal-right" style="animation-duration: 1.5s;">
+                    <p>
+                        Legyen szó promóciós weboldalról, komplex webalkalmazásról, SEO-ról vagy teljes IT infrastruktúráról 
+                        – mi mindent lefedünk. Egy kézből, összehangoltan, mérhetően.
+                    </p>
+                    <p>
+                        A webdesignon és a marketingen túl teljes IT üzemeltetést és hardver szervízt is kínálunk, 
+                        hogy digitális rendszered gördülékenyen működjön és a vállalkozásod a legjobb fényben tündököljön.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE — double row -->
+    <div class="marquee-wrapper" aria-hidden="true">
+        <!-- Row 1 — scrolls left (JS clones track for seamless loop) -->
+        <div class="marquee">
+            <div class="marquee-track">
+                <span class="marquee-item">THAIHARMONY</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">PORTA PÁTRIA</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">ELYSIUM PRODUCTIONS</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">CLUB11 FITNESS</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">BETTOKFT</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">DORKO X PADEL</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">BISTRO PIANO</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">APRÓ AUTÓSISKOLA</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">MADEBYREKA</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">DRÁVA PARTY KEMPING</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+        <!-- Row 2 — scrolls right (JS clones track for seamless loop) -->
+        <div class="marquee marquee--reverse">
+            <div class="marquee-track">
+                <span class="marquee-item">WEBOLDAL</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">MARKETING</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">IT MEGOLDÁSOK</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">SEO</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">BRAND IDENTITY</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">WEBSHOP</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">SOCIAL MEDIA</span>
+                <span class="marquee-sep">✦</span>
+                <span class="marquee-item">IT ÜZEMELTETÉS</span>
+                <span class="marquee-sep">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- VISION SECTION — bold, full-width, no image -->
+    <section class="vision-section" id="vision">
+        <div class="vision-inner">
+            <h2 class="vision-heading" id="visionHeading">
+                <span class="vision-line" data-style="fill" id="visionLine1">MEGVAN A</span>
+                <br>
+                <span class="vision-line" data-style="outline-pink" id="visionLine2">TAPASZTALATUNK</span>
+                <br>
+                <span class="vision-line" data-style="fill" id="visionLine3">ÉS A SZAKTUDÁSUNK</span>
+            </h2>
+
+            <div class="vision-grid">
+                <div class="vision-stat">
+                    <span class="vision-number">10<span class="vision-plus vision-plus-pink">+</span></span>
+                    <span class="vision-label">Sikeres projekt</span>
+                </div>
+                <div class="vision-divider"></div>
+                <div class="vision-stat">
+                    <span class="vision-number">3</span>
+                    <span class="vision-label">Szakmai terület egy kézből</span>
+                </div>
+                <div class="vision-divider"></div>
+                <div class="vision-stat">
+                    <span class="vision-number">100<span class="vision-plus">%</span></span>
+                    <span class="vision-label">Elkötelezettség minden ügyfél iránt</span>
+                </div>
+            </div>
+
+            <div class="vision-bottom">
+                <p class="vision-tagline">A tervezéstől a kivitelezésig — mi visszük végig.</p>
+                <a href="#cases" class="link-arrow">
+                    <span class="link-text">LÁSD AZ EREDMÉNYEKET</span>
+                    <span class="link-icon">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION — sticky scroll with big number -->
+    <section id="services" class="services-section">
+
+        <div class="services-header">
+            <span class="services-eyebrow">Amit kínálunk</span>
+            <div class="title-reveal-wrap">
+                <h2 class="services-mega-title" id="servicesMegaTitle">SZOLGÁLTATÁSAINK</h2>
+                <span class="title-reveal-block" id="titleRevealBlock"></span>
+            </div>
+        </div>
+
+        <!-- Sticky scroll area — JS sets height to numServices × 100vh -->
+        <div class="services-scroll-area" id="servicesScrollArea">
+            <div class="services-sticky-panel">
+
+                <!-- LEFT: slot-machine number -->
+                <div class="services-num-col">
+                    <div class="services-num-outer" id="servicesNumOuter">
+                        <div class="services-num-inner" id="servicesNumInner">
+                            <div class="services-num-slot">01</div>
+                            <div class="services-num-slot">02</div>
+                            <div class="services-num-slot">03</div>
+                            <div class="services-num-slot">04</div>
+                            <div class="services-num-slot">05</div>
+                        </div>
+                    </div>
+                    <div class="services-num-total">/ 05</div>
+                </div>
+
+                <!-- RIGHT: clipped scrolling panels -->
+                <div class="services-content-col">
+                    <div class="services-track" id="servicesTrack">
+
+                        <div class="service-panel">
+                            <div class="service-panel-inner">
+                                <div class="service-tag">WEB</div>
+                                <h3 class="service-panel-title">Webfejlesztés</h3>
+                                <p class="service-panel-desc">Konverzióra tervezett, villámgyors és mobilbarát weboldalak. WordPress, egyedi fejlesztés, landing oldalak – prémium minőségben.</p>
+                                <a href="#contact" class="link-arrow">
+                                    <span class="link-text">PROJEKT INDÍTÁSA</span>
+                                    <span class="link-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-panel">
+                            <div class="service-panel-inner">
+                                <div class="service-tag">MARKETING</div>
+                                <h3 class="service-panel-title">Marketing & Növekedés</h3>
+                                <p class="service-panel-desc">SEO és Google Ads összehangolva, adatvezérelt döntésekkel. Tartalomkészítés, analitika, konverziókövetés – hogy a forgalom tényleg konvertáljon.</p>
+                                <a href="#contact" class="link-arrow">
+                                    <span class="link-text">KAMPÁNY INDÍTÁSA</span>
+                                    <span class="link-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-panel">
+                            <div class="service-panel-inner">
+                                <div class="service-tag">IT</div>
+                                <h3 class="service-panel-title">IT & Üzemeltetés</h3>
+                                <p class="service-panel-desc">Stabilitás és biztonság, amelyre üzleti folyamatok épülhetnek. Rendszeradminisztráció, hálózatkezelés, proaktív monitoring.</p>
+                                <a href="#contact" class="link-arrow">
+                                    <span class="link-text">KAPCSOLATFELVÉTEL</span>
+                                    <span class="link-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-panel">
+                            <div class="service-panel-inner">
+                                <div class="service-tag">HARDVER</div>
+                                <h3 class="service-panel-title">Hardver & Szerviz</h3>
+                                <p class="service-panel-desc">Gyors beavatkozás, minimális állásidő. Számítógép javítás, hardver diagnózis, adatmentés és irodai eszközök konfigurálása.</p>
+                                <a href="#contact" class="link-arrow">
+                                    <span class="link-text">SZERVIZ IGÉNYLÉSE</span>
+                                    <span class="link-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service-panel">
+                            <div class="service-panel-inner">
+                                <div class="service-tag">INFRASTRUKTÚRA</div>
+                                <h3 class="service-panel-title">Tárhely & Infrastruktúra</h3>
+                                <p class="service-panel-desc">Megbízható, optimalizált tárhely. Webtárhely, domain kezelés, szerver konfiguráció, SSL, biztonsági mentések.</p>
+                                <a href="#contact" class="link-arrow">
+                                    <span class="link-text">CSOMAG MEGTEKINTÉSE</span>
+                                    <span class="link-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         CASES / RESULTS — Abstract Parallax Layering
+    ═══════════════════════════════════════════════════════ -->
+    <section id="cases" class="cases-redesign">
+        <div class="cases-scroll-container" id="casesScrollContainer">
+            <div class="cases-sticky">
+                
+                <!-- Center massive text -->
+                <div class="cases-massive-header">
+                    <p class="cases-eyebrow" id="casesEyebrow">Nem ígéreteket adunk – eredményeket.</p>
+                    <h2 class="cases-title">
+                        VALÓDI PROJEKTEK,<br>
+                        <span class="animated-gradient-text">VALÓDI SZÁMOK</span>
+                    </h2>
+                </div>
+
+                <!-- Abstract floating reference images — Row 1: 2, Row 2: 3, Row 3: 1 -->
+                <div class="cases-floating-layer">
+
+                    <!-- Row 1 -->
+                    <div class="case-float float-1" id="cf1">
+                        <img src="Madebyreka.png" alt="Madebyreka" class="case-ref-img">
+                        <div class="case-float-label"><strong>MADEBYREKA</strong><span>+60% ÉRDEKLŐDŐ</span></div>
+                    </div>
+
+                    <div class="case-float float-2" id="cf2">
+                        <img src="Elysium.png" alt="Elysium" class="case-ref-img">
+                        <div class="case-float-label"><strong>ELYSIUM</strong><span>WEB & MARKETING</span></div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="case-float float-3" id="cf3">
+                        <img src="Club11.png" alt="Club 11" class="case-ref-img">
+                        <div class="case-float-label"><strong>CLUB 11</strong><span>BRAND & WEB</span></div>
+                    </div>
+
+                    <div class="case-float float-4" id="cf4">
+                        <img src="Apro.png" alt="Apró" class="case-ref-img">
+                        <div class="case-float-label"><strong>APRÓ</strong><span>WEBOLDAL & SEO</span></div>
+                    </div>
+
+                    <div class="case-float float-5" id="cf5">
+                        <img src="Bistro Piano.png" alt="Bistro Piano" class="case-ref-img">
+                        <div class="case-float-label"><strong>BISTRO PIANO</strong><span>DESIGN & FEJLESZTÉS</span></div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="case-float float-6" id="cf6">
+                        <img src="Thai.png" alt="Thai Harmony" class="case-ref-img">
+                        <div class="case-float-label"><strong>THAI HARMONY</strong><span>MARKETING & WEB</span></div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="processSection">
+        <div class="process-sticky">
+            <div class="proc-bg" id="procBg1"></div>
+            <div class="proc-bg" id="procBg2"></div>
+
+            <span id="dorkoText"  class="dp-text dp-left">DRK</span>
+            <span id="padelText"  class="dp-text dp-right">PADEL</span>
+            <span id="portaText"  class="dp-text dp-left">PORTA</span>
+            <span id="patriaText" class="dp-text dp-right">PATRIA</span>
+
+            <div id="infoCard1" class="proc-info-card">
+                <h3>Sebesség, ami pozíciót hoz</h3>
+                <p>Teljeskörű technikai optimalizálás és design újragondolás. Gyorsabb oldal, magasabb Google-rangsor, hitelesebb márka.</p>
+            </div>
+            <div id="infoCard2" class="proc-info-card">
+                <h3>Jelenlét, ami eladja magát</h3>
+                <p>Prémium vizuális identitás és célzott digitális jelenlét. Több vendég, erősebb márka, tartós növekedés.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         TRUST / STATS
+    ═══════════════════════════════════════════════════════ -->
+    <section class="trust-section">
+        <div class="trust-inner">
+            <div class="trust-stat reveal-up" data-delay="0">
+                <span class="trust-number" data-target="10">0</span>
+                <span class="trust-label">SIKERES PROJEKT</span>
+            </div>
+            <div class="trust-stat reveal-up" data-delay="100">
+                <span class="trust-number" data-target="5">0</span>
+                <span class="trust-label">SZAKTERÜLET</span>
+            </div>
+            <div class="trust-stat reveal-up" data-delay="200">
+                <span class="trust-number" data-target="24">0</span>
+                <span class="trust-label">ÓRA VÁLASZIDŐ</span>
+            </div>
+            <div class="trust-stat reveal-up" data-delay="300">
+                <span class="trust-number" data-target="100">0</span>
+                <span class="trust-label">% ELÉGEDETTSÉG</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CONTACT / FOOTER CTA — with rotating badge
+    ═══════════════════════════════════════════════════════ -->
+    <footer id="contact" class="footer-section">
+        <div class="footer-cta">
+            <h2 class="footer-title reveal-up">KÉSZEN ÁLL?<br><span class="text-accent">BESZÉLJÜNK!</span></h2>
+            <a href="mailto:info@codefleet.com" class="footer-email reveal-up">info@codefleet.com</a>
+            <p class="footer-desc reveal-up">
+                Ne hagyja, hogy az elavult weboldal, a szétszabdalt IT és a mérhetetlen marketing akadályozza a növekedést. 
+                Kérjen ingyenes auditot – 24 órán belül válaszolunk.
+            </p>
+
+            <!-- Rotating CTA -->
+            <a href="mailto:info@codefleet.com" class="rotating-badge reveal-scale" aria-label="Ingyenes audit kérése — írjon nekünk">
+                <div class="badge-text-ring">
+                    <svg viewBox="0 0 100 100" width="100%" height="100%">
+                        <defs>
+                            <path id="badgeCirclePath" d="M 50, 50 m -40, 0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
+                        </defs>
+                        <text>
+                            <textPath href="#badgeCirclePath" startOffset="0%">
+                                INGYENES AUDIT · ÍRJON NEKÜNK · INGYENES AUDIT · ÍRJON NEKÜNK ·
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+                <span class="badge-center">→</span>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-left">
+                <span class="footer-logo">CODEFLEET</span>
+                <p>© 2026 CodeFleet. Minden jog fenntartva.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed morphing circle: peeks from cases bottom, shrinks into process section -->
+    <div id="fixedCircle" class="fixed-circle"></div>
+
+    <script src="./main.js?v=14"></script>
+</body>
+</html>
